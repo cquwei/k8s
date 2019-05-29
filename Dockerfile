@@ -1,0 +1,13 @@
+FROM k8s.gcr.io/kube-apiserver-amd64:v1.11.1
+FROM k8s.gcr.io/kube-controller-manager-amd64:v1.11.1
+FROM k8s.gcr.io/kube-scheduler-amd64:v1.11.1
+FROM k8s.gcr.io/kube-proxy-amd64:v1.11.1
+FROM k8s.gcr.io/pause:3.1
+FROM k8s.gcr.io/etcd-amd64:3.2.18
+FROM k8s.gcr.io/coredns:1.1.3
+FROM quay.io/coreos/flannel:v0.10.0-amd64
+FROM gcr.io/kubernetes-helm/tiller:v2.9.1
+FROM k8s.gcr.io/kubernetes-dashboard-amd64:v1.8.3
+FROM gcr.io/google_containers/heapster-amd64:v1.5.4
+FROM gcr.io/google_containers/heapster-influxdb-amd64:v1.5.2
+FROM gcr.io/google_containers/heapster-grafana-amd64:v5.0.4
